@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="0pH-Yp-PeT">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Ex1-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="Ex1ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="vpV-G0-nC3">
+                                <rect key="frame" x="125" y="208" width="30" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ig7-oP-Dff">
+                                <rect key="frame" x="131" y="254" width="68" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.72425934386508994" blue="0.19821416088400146" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <color key="tintColor" red="1" green="0.23198302877322685" blue="0.44745752744924028" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="0"/>
+                                <connections>
+                                    <action selector="touch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1iy-rJ-iMu"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Ex1" id="efm-yz-mV8"/>
+                    <connections>
+                        <outlet property="button" destination="Ig7-oP-Dff" id="FYf-7J-ON8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1173.75" y="-855.63380281690138"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="9Cz-N6-mK7">
+            <objects>
+                <viewController id="0oC-Jg-lxq" customClass="ViewController" customModule="_2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="smE-hF-oKB"/>
+                        <viewControllerLayoutGuide type="bottom" id="J1W-LJ-CG6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XW1-JR-9S3">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p2O-bq-vah">
+                                <rect key="frame" x="114" y="269" width="71" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.89819115333914978" green="0.46530891209095571" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="EX2"/>
+                                <connections>
+                                    <action selector="gotoEx2:" destination="0oC-Jg-lxq" eventType="touchUpInside" id="ywo-ko-FcG"/>
+                                    <segue destination="lD4-K9-0bl" kind="push" id="aJw-a9-LAe"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fRp-h1-0vM">
+                                <rect key="frame" x="114" y="203" width="71" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.4534871104349778" blue="0.85979993816612821" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="EX1"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="push" id="k8U-tu-tfa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Mq-sq-AI2">
+                                <rect key="frame" x="77" y="353" width="144" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.93301083350289238" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="tintColor" red="1" green="0.039765733839813522" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Calculator"/>
+                                <connections>
+                                    <action selector="gotoCalculator:" destination="0oC-Jg-lxq" eventType="touchDragInside" id="xTR-D8-Y74"/>
+                                    <segue destination="khS-UB-nRq" kind="push" id="VrQ-18-JXS"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Home" id="5oh-yo-KTo"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vnW-41-nd4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="199" y="-64"/>
+        </scene>
+        <!--Ex2-->
+        <scene sceneID="KgT-OJ-D7n">
+            <objects>
+                <viewController id="lD4-K9-0bl" customClass="Ex2ViewController" customModule="_2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="W2s-ij-5JF"/>
+                        <viewControllerLayoutGuide type="bottom" id="k6g-pE-jlM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ngp-1s-ESj">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Ex2" id="tx6-Od-ont"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W2k-mX-AL4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1174" y="-64"/>
+        </scene>
+        <!--Calculator-->
+        <scene sceneID="ewA-T6-9Pl">
+            <objects>
+                <viewController id="khS-UB-nRq" customClass="CalculatorViewController" customModule="_2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3uM-ZC-6iT"/>
+                        <viewControllerLayoutGuide type="bottom" id="owx-Iu-645"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6hZ-3h-xnX">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Calculator" id="VUf-GP-CP0"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AUO-8I-YvG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1174" y="760"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="XGN-LJ-Ptt">
+            <objects>
+                <navigationController id="0pH-Yp-PeT" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cpz-Uj-Zmc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="0oC-Jg-lxq" kind="relationship" relationship="rootViewController" id="2cu-sI-BWa"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rcf-by-3Ec" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-819" y="-64"/>
+        </scene>
+    </scenes>
+</document>
