@@ -10,6 +10,13 @@ import UIKit
 
 class Ex2ViewController: UIViewController {
 
+    @IBOutlet weak var textRand: UITextField!
+    var rand:Int!
+    @IBAction func touch(_ sender: Any) {
+        rand = Int(arc4random_uniform(1000))
+        let text:String = "\(rand!)"
+        textRand.text = text
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 

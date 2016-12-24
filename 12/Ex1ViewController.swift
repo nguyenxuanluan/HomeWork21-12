@@ -9,6 +9,7 @@
 import UIKit
 
 class Ex1ViewController: UIViewController {
+    
     @IBOutlet weak var button: UIButton!
     var count = 0
     override func viewDidLoad() {
@@ -20,6 +21,7 @@ class Ex1ViewController: UIViewController {
     @IBAction func touch(_ sender: Any) {
         count += 1
         button.setTitle("\(count)", for: .normal)
+
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
