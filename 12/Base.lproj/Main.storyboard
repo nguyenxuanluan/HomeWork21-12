@@ -434,7 +434,7 @@
         <scene sceneID="XGN-LJ-Ptt">
             <objects>
                 <navigationController id="0pH-Yp-PeT" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cpz-Uj-Zmc">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="cpz-Uj-Zmc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

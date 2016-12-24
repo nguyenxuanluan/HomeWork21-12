@@ -7,7 +7,9 @@
 //
 
 import UIKit
-
+enum error1: Error{
+    case invalid
+}
 class CalculatorViewController: UIViewController {
 
 
@@ -41,18 +43,41 @@ class CalculatorViewController: UIViewController {
     @IBAction func touchButtonAC(_ sender: Any) {
         output.text = ""
     }
+    func check(output: String) throws -> String {
+        let arr = output.characters.split(separator: " ")
+        print(arr.endIndex)
+        if arr.endIndex == 1 && operArr.contains(String(arr[arr.endIndex-1])) {
+            throw error1.invalid
+        } else {
+        for i in 0...arr.endIndex-2 {
+            if ( operArr.contains(String(arr[i])) &&  operArr.contains(String(arr[i+1]))){
+                throw error1.invalid
+            }
+        }
+        }
+        return output
+        
+    }
     @IBAction func touchButtonResult(_ sender: Any) {
-        let out = output.text
-        let result:Double
+        var out = output.text
+        var result:Double = 0
         if (out?.isEmpty)! {
             return
         } else {
-            if (!(out?.contains("%"))!){
+            if (!((out?.contains("%")))! || out != "%" ){
                
-        let exp = NSExpression(format: out!)
-        exp.expressionValue(with: nil, context: nil)
-             result = exp.expressionValue(with: nil, context: nil) as!Double
-                print(result.isInfinite)
+        
+                do {
+                    out = try check(output: out!)
+                    let exp = NSExpression(format: out!)
+                    result =  exp.expressionValue(with: nil, context: nil) as!Double
+                } catch error1.invalid {
+                    output.text = "Math Error"
+                    checkError = true
+                    return
+                } catch {
+                }
+                
                 if result.isInfinite || result.isNaN {
                     output.text = "Math Error"
                     checkError = true
@@ -61,8 +86,8 @@ class CalculatorViewController: UIViewController {
 
             } else {
                 let nums:[String]=out!.components(separatedBy: "%")
-                let divisor = NumberFormatter().number(from: nums[0]) as! Double
-                let dividend =  NumberFormatter().number(from: nums[1]) as! Double
+                let divisor = nums[0].toDouble()
+                let dividend =  nums[1].toDouble()
                 print(divisor)
                 print(dividend)
                 let div = Int(divisor/dividend)
@@ -93,10 +118,10 @@ class CalculatorViewController: UIViewController {
                         out = next
                     } else {
                         if numArr.contains(next){
-                            out = out + "\(next.toDouble())"
+                            out = out + " \(next.toDouble())"
                         }
                         else {
-                           out = out + "\(next)" 
+                           out = out + " \(next)" 
                         }
                  
                     }
